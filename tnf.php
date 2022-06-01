@@ -22,13 +22,17 @@
 
           <div class="card">
           <img src="<?=$img_tnf?>" class="card-img-top kaart" alt="..." />
+          <?php $item_name3 = "The North Face"
+          ?>
+          <?php $item_desc3 = "Black Puffer Jacket"
+          ?>
             <div class="card-body">
 
             
-              <h5 class="card-title">The North Face</h5>
+              <h5 class="card-title"><?php echo $item_name3?></h5>
               
               <p class="card-text">
-                Black Puffer Jacket
+              <?php echo $item_desc3?>
                 <div class="korting">
               <?php
             if($korting == true){
@@ -70,11 +74,15 @@
           <div class="card">
 
           <img src="<?=$img_tnf?>" class="card-img-top kaart" alt="..." />
+          <?php $item_name3 = "The North Face"
+          ?>
+          <?php $item_desc3 = "Orange Puffer Jacket"
+          ?>
           
             <div class="card-body">
               <h5 class="card-title">The North Face</h5>
               <p class="card-text">
-                Orange Puffer Jacket
+              <?php echo $item_desc3?>
                 <?php
                 $prijs_tnf = 264.99;
                 $prijs_tnfExcl = $prijs_tnf * 0.79; 
@@ -108,10 +116,14 @@
         <div class="col">
           <div class="card">
           <img src="<?=$img_tnf?>" class="card-img-top kaart" alt="..." />
+          <?php $item_name3 = "The North Face"
+          ?>
+          <?php $item_desc3 = "Yellow Puffer Jacket"
+          ?>
             <div class="card-body">
-              <h5 class="card-title">The North Face</h5>
+              <h5 class="card-title"><?php echo $item_name3?></h5>
               <p class="card-text">
-                Yellow Puffer Jacket
+              <?php echo $item_desc3?>
                 <?php
                 $prijs_tnf = 229.99;
                 $prijs_tnfExcl = $prijs_tnf * 0.79; 

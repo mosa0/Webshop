@@ -28,10 +28,15 @@
 
 
           <img src="<?=$img_yeezy?>" class="card-img-top kaart2" alt="..." />
+          <?php $item_name = "Yeezy 350 V2"
+          ?>
+          <?php $item_desc = "Black Pirate"
+          ?>
             <div class="card-body">
-              <h5 class="card-title">Yeezy 350 V2</h5>
-              <p class="card-text">
-                Black Pirate
+              <h5 class="card-title"> <?php echo $item_name?></h5>
+              <p class="card-text"><?php echo $item_desc?>
+                
+                
                 
                 
                 <H3 class=prijs>
@@ -66,9 +71,9 @@
           <div class="card">
           <img src="<?=$img_yeezy?>" class="card-img-top kaart2" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Yeezy 350 V2</h5>
+              <h5 class="card-title"><?php echo $item_name?></h5>
               <p class="card-text">
-                Ash Pearle
+              <?php echo "Ash Pearle";$item_desc?> 
                 
               </p>
               <H3 class=prijs>
@@ -99,10 +104,12 @@
         ?>
           <div class="card">
           <img src="<?=$img_yeezy?>" class="card-img-top kaart2" alt="..." />
+          <?php $item_name1 = "Yeezy 350 V2"
+          ?>
             <div class="card-body">
-              <h5 class="card-title">Yeezy 350 V2</h5>
+              <h5 class="card-title"><?php echo $item_name?></h5>
               <p class="card-text">
-                Oreo
+              <?php echo "Oreo";$item_desc1?> 
                 
                 
                 <H3 class=prijs>
@@ -139,9 +146,13 @@
           
           <img src="<?=$img_tommy?>" class="card-img-top kaart3" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Tommy Hilfiger Crewneck</h5>
+            <?php $item_name1 = "Tommy Hilfiger crewneck"?>
+            <?php $item_desc1 = "White Tommy Hilfiger Crewneck"?>
+              <h5 class="card-title"><?php echo $item_name1?></h5>
+              
+          
               <p class="card-text">
-                White Tommy Hilfiger Crewneck.
+              <?php echo $item_desc1?>
                 
                 
                 <H3 class=prijs>
@@ -175,9 +186,11 @@
           <div class="card">
           <img src="<?=$img_tommy?>" class="card-img-top kaart3" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Tommy Hilfiger crewneck</h5>
+            <?php $item_name1 = "Tommy Hilfiger crewneck"?>
+            <?php $item_desc1 = "Green Tommy Hilfiger Crewneck"?>
+              <h5 class="card-title"><?php echo $item_name1?></h5>
               <p class="card-text">
-              Green Tommy Hilfiger Crewneck.
+              <?php echo $item_desc1?>
                 
                 
                 <H3 class=prijs>
@@ -210,9 +223,11 @@
           <div class="card">
           <img src="<?=$img_tommy?>" class="card-img-top kaart4" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Tommy Hilfiger Hoodie</h5>
+            <?php $item_name1 = "Tommy Hilfiger Hoodie"?>
+            <?php $item_desc1 = "Beige Tommy Hilfiger Hoodie"?>
+              <h5 class="card-title"><?php echo $item_name1?></h5>
               <p class="card-text">
-                Beige Tommy Hilfiger Hoodie.
+              <?php echo $item_desc1?>
                 
                 
                 <H3 class=prijs>
@@ -245,9 +260,11 @@
           <div class="card">
           <img src="<?=$img_tommy?>" class="card-img-top kaart5" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Tommy Hilfiger Hoodie</h5>
+            <?php $item_name1 = "Tommy Hilfiger Hoodie"?>
+            <?php $item_desc1 = "Dark Blue Tommy Hilfiger Hoodie"?>
+              <h5 class="card-title"><?php echo $item_name1?></h5>
               <p class="card-text">
-                Dark Blue Tommy Hilfiger Hoodie.
+              <?php echo $item_desc1?>
                 
                 
                 <H3 class=prijs>
