@@ -18,32 +18,36 @@
 
 
 <body>
+
     <div class="logo-1">
-<img src="./img/logo.svg" alt="" srcset="">
+      <?php $img_logo = 'img\logo.svg' ;
+?>
+<div class=shopknop><button  onclick="window.location.href='#north';"type="button" class="btn btn-light">Start shopping now.
+  
+</button>
+</div>
+<img src="<?=$img_logo?>" alt="" srcset="">
     </div>
     <div class="logo">
-  <img src="./img/twitter_header_photo_2.png" class="img-thumbnail" alt="...">
+    <?php $img_logo1 = 'img\twitter_header_photo_2.png' ;
+?>
+  <img src="<?=$img_logo1?>" class="img-thumbnail" alt="...">
     </div>
-    
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/webshop">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">The North Face</a>
+              <a class="nav-link" href="#north">The North Face</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Yeezy</a>
+              <a class="nav-link" href="#ye">Yeezy</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tommy Hilfiger</a>
+              <a class="nav-link" href="#tm">Tommy Hilfiger</a>
             </li>
           </ul>
         </div>
