@@ -11,6 +11,7 @@
    <?php 
   $title_tommy = "The Tommy Hilfiger Line"
   ?>
+  <? $euro = "€" ?>
   
 
 
@@ -40,10 +41,11 @@
                 
                 
                 <H3 class=prijs>
+                  <?php echo $euro?>
                 <?= number_format($prijs_yeezy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs><?= number_format($prijs_yeezyExcl, 2, ',', '') ?> excl BTW </h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
 
                 <?php
                 if($prijs_yeezy >634){
@@ -77,10 +79,11 @@
                 
               </p>
               <H3 class=prijs>
+              <?php echo $euro?>
                 <?= number_format($prijs_yeezy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_yeezyExcl, 2, ',', '') ?> excl BTW </h6>
                 </H3>
-              <button type="button" class="btn btn-dark">Dark</button>
+              <button type="button" class="btn btn-dark">Add to cart</button>
               
               <?php
                 if($prijs_yeezy >634){
@@ -113,10 +116,11 @@
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_yeezy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs><?= number_format($prijs_yeezyExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
                 <?php
                 if($prijs_yeezy >634){
                   echo 'niet op voorraad';
@@ -156,10 +160,11 @@
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tommy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tommyExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
 
                 <?php
                 if($prijs_tommy >130){
@@ -194,10 +199,11 @@
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tommy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tommyExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
                 <?php
                 if($prijs_tommy >130){
                   echo 'niet op voorraad';
@@ -231,10 +237,11 @@
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tommy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tommyExcl, 2, ',', '') ?> excl btw</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
                 <?php
                 if($prijs_tommy >130){
                   echo 'niet op voorraad';
@@ -268,10 +275,11 @@
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tommy, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tommyExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
                 <?php
                 if($prijs_tommy >634){
                   echo 'niet op voorraad';

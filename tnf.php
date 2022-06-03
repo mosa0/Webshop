@@ -42,16 +42,18 @@
                 <?php
                 $prijs_tnf = 249.99;
                 $prijs_tnfExcl = $prijs_tnf * 0.79; 
+                $euro = "€"
                ?>
 
                 
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tnf, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tnfExcl, 2, ',', '') ?> excl BTW
                 </h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
                 
 
                 <?php
@@ -91,10 +93,11 @@
                 ?>
                 
                 <H3 class=prijs>
+                <?php echo $euro?>
                 <?= number_format($prijs_tnf, 2, ',', '') ?> incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tnfExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
 
                 <?php
                 if($prijs_tnf <249){
@@ -127,13 +130,16 @@
                 <?php
                 $prijs_tnf = 229.99;
                 $prijs_tnfExcl = $prijs_tnf * 0.79; 
+                $euro = "€"
                 ?>
                 
                 <H3 class=prijs>
-                <?= number_format($prijs_tnf, 2, ',', '') ?> incl BTW
+                <?php echo $euro ?>
+                <?= number_format($prijs_tnf, 2, ',', '') ?>
+                incl BTW
                 <h6 class=prijs> <?= number_format($prijs_tnfExcl, 2, ',', '') ?> excl BTW</h6>
                 </H3>
-                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-dark">Add to cart</button>
 
                 <?php
                 if($prijs_tnf <249){

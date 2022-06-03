@@ -113,3 +113,6 @@ scroll-behavior: smooth;
 .logo_knop{
   z-index: 10000;
 }
+.navbar{
+  border-radius: 15px;
+}

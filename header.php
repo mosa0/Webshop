@@ -49,6 +49,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#tm">Tommy Hilfiger</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shopping.html">Shopping Cart</a>
+            </li>
           </ul>
         </div>
       </div>
