@@ -13,6 +13,7 @@
   ?>
   <? $euro = "€" ?>
   
+  
 
 
 
@@ -99,6 +100,8 @@
             </div>
           </div>
         </div>
+        <?php $korting[3]["korting"] =true;
+  ?>
         <?php $img_yeezy[3]["image"] = 'img\yeezy3.jpg' ;
 ?>
         <div class="col">
@@ -114,7 +117,15 @@
               <!-- ZELFDE PROBLEEM MOET OP 1 EN BIJ 117(item desc oreo) GEEN  -->
               <h5 class="card-title"><?php echo $item_name[1]["item_name"]?></h5>
               <p class="card-text">
-              <?php echo "Oreo";$item_desc1?> 
+                <div class="spacing_title">
+              <?php echo "Oreo";$item_desc1?>
+            </div> 
+              <div class="korting">
+              <?php
+            if($korting[3]["korting"] == true){
+              echo '€499,99';
+            }?>
+          </div>
                 
                 
                 <H3 class=prijs>
@@ -144,6 +155,8 @@
       <div class="row row-cols-1 row-cols-md-2 g-4">
       <?php $img_tommy[4]["image"] = 'img\tom1.jpg' ;
 ?>
+<?php $korting[4]["korting"] =true;
+  ?>
         <div class="col">
         <?php
           $prijs_tommy[4]["price"] = 99.99;
@@ -159,7 +172,15 @@
               
           
               <p class="card-text">
+              <div class="spacing_title">
               <?php echo $item_desc1[4]["item_desc"]?>
+              </div>
+              <div class="korting">
+              <?php
+            if($korting[4]["korting"] == true){
+              echo '€120,00';
+            }?>
+          </div>
                 
                 
                 <H3 class=prijs>
@@ -187,6 +208,8 @@
         <?php $img_tommy[5]["image"] = 'img\tom2.jpg' ;
 ?>
         <div class="col">
+        <?php $korting[5]["korting"] =true;
+  ?>
         <?php
           $prijs_tommy[5]["price"] = 99.99;
           $prijs_tommyExcl[5]["priceExcl"] = $prijs_tommy[5]["price"] * 0.79;
@@ -198,7 +221,15 @@
             <?php $item_desc1[5]["item_desc"] = "Green Tommy Hilfiger Crewneck"?>
               <h5 class="card-title"><?php echo $item_name1[5]["item_name"]?></h5>
               <p class="card-text">
+                <div class="space_lining">
               <?php echo $item_desc1[5]["item_desc"]?>
+              </div>
+              <div class="korting">
+              <?php
+            if($korting[5]["korting"] == true){
+              echo '€120,00';
+            }?>
+          </div>
                 
                 
                 <H3 class=prijs>
@@ -262,6 +293,8 @@
         <?php $img_tommy[7]["image"] = 'img\tom4.jpg' ;
 ?>
         <div class="col">
+        <?php $korting[7]["korting"] =true;
+  ?>
         <?php
           $prijs_tommy[7]["price"] = 109.99;
           $prijs_tommyExcl[7]["priceExcl"] = $prijs_tommy[7]["price"] * 0.79;
@@ -274,7 +307,15 @@
             <?php $item_desc1[7]["item_desc"] = "Dark Blue Tommy Hilfiger Hoodie"?>
               <h5 class="card-title"><?php echo $item_name1[7]["item_name"]?></h5>
               <p class="card-text">
+                <div class = space_lining>
               <?php echo $item_desc1[7]["item_desc"]?>
+              </div>
+              <div class="korting">
+              <?php
+            if($korting[7]["korting"] == true){
+              echo '€120,00';
+            }?>
+          </div>
                 
                 
                 <H3 class=prijs>

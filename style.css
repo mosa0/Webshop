@@ -79,6 +79,7 @@ h1 {
   bottom: 500px;
   float: right;
   right: 20px;
+  
 }
 .nav-item {
   font-size: larger;
@@ -115,4 +116,9 @@ scroll-behavior: smooth;
 }
 .navbar{
   border-radius: 15px;
+}
+.korting{
+  margin-bottom: 5px;
+  text-decoration: line-through;
+  color: gray;
 }

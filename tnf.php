@@ -32,11 +32,13 @@
               <h5 class="card-title"><?php echo $item_name3[8]["item_name"]?></h5>
               
               <p class="card-text">
+              <div class="spacing_title">
               <?php echo $item_desc3[8]["item_desc"]?>
+              </div>
                 <div class="korting">
               <?php
             if($korting[8]["korting"] == true){
-              echo 'Dikke korting!';
+              echo '€300,00';
             }?>
           </div>
                 <?php
