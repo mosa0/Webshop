@@ -3,6 +3,7 @@
 <?php include_once'tnf.php'
 ?>
 
+
 <!-- Title variabele kan geplaatst worden in de card zelf-->
   
    <?php 
