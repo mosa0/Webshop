@@ -1,346 +1,43 @@
-<?php include_once'header.php'
-?>
-<?php include_once'tnf.php'
-?>
+<?php include_once'header.php';
+include_once'tnf.php';
+include_once'yeezy.php';
+include_once'tommy.php';
 
+//maak de connectie beschikbaar in dit bestand
+require "dbconnection.class.php";
+//maak een nieuwe connectie aan in de variabele $dbconnect
+$dbconnect = new dbconnection();
+
+//op de volgende regel bouw je een sql-query (leren we in module 10); als je alle producten uit de tabel met de naam ‘product’ wilt trekken heb je de volgende query nodig
+$sql = "SELECT * FROM product";
+
+//hier zet je de query klaar, ‘prepare()’ is een functie binnen PDO die je kunt gebruiken bij de variabele $dbconnect
+$query = $dbconnect -> prepare($sql);
+
+//hier voer je de database bevraging uit, ‘execute()’ is een functie binnen PDO die je los kunt laten op de variabele $query
+$query -> execute() ;
+
+//hier sla je alle records die je uit de database opgevraagd hebt, op in de array $recset ('recset' is een afkorting voor records-set - een andere naam mag ook);
+//‘fetchAll()’ is een functie binnen PDO en betekent letterlijk: trek (fetch) alles (all) uit de database op basis van de query;
+//$recset is een array met gevonden records uit de database
+$recset = $query -> fetchAll(PDO::FETCH_ASSOC);
+
+//om te zien wat je nu precies uit de database gehaald hebt:
+echo "<pre>";
+print_r($recset);
+echo "</pre>";?>
 
 <!-- Title variabele kan geplaatst worden in de card zelf-->
   
-   <?php 
-  $title_yeezy[1]["title"] = "The Yeezy Line"
-  ?>
-   <?php 
-  $title_tommy = "The Tommy Hilfiger Line"
-  ?>
+
   <? $euro = "€" ?>
   
   
 
 
 
-  <div id="ye"></div>
-        <div class="yeezy-t"><h1><?php echo $title_yeezy[1]["title"]?></h1></div>
-        <?php
-          $prijs_yeezy[1]["price"] = 635.00;
-          $prijs_yeezyExcl[1]["priceExcl"] = $prijs_yeezy[1]["price"] * 0.79;
-        ?>
-        <?php $img_yeezy[1]["image"] = 'img\yeezy1.jpg' ;
-?>
-        <div class="col">
-          <div class="card">
-
-
-          <img src="<?=$img_yeezy[1]["image"]?>" class="card-img-top kaart2" alt="..." />
-          <?php $item_name[1]["item_name"] = "Yeezy 350 V2"
-          ?>
-          <?php $item_desc[1]["item_desc"] = "Black Pirate"
-          ?>
-            <div class="card-body">
-              <h5 class="card-title"> <?php echo $item_name[1]["item_name"]?></h5>
-              <p class="card-text"><?php echo $item_desc[1]["item_desc"]?>
-                
-                
-                
-                
-                <H3 class=prijs>
-                  <?php echo $euro?>
-                <?= number_format($prijs_yeezy[1]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs><?= number_format($prijs_yeezyExcl[1]["priceExcl"], 2, ',', '') ?> excl BTW </h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-
-                <?php
-                if($prijs_yeezy[1]["price"] >634){
-                  echo 'niet op voorraad';
-                }else if($prijs_yeezy[1]["price"] < 440){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <?php
-          $prijs_yeezy[2]["price"] = 450.00;
-          $prijs_yeezyExcl[2]["priceExcl"] = $prijs_yeezy[2]["price"] * 0.79;
-        ?>
-        <?php $img_yeezy[2]["image"] = 'img\yeezy2.jpg' ;
-?>
-        
-        <div class="col">
-          <div class="card">
-          <img src="<?=$img_yeezy[2]["image"]?>" class="card-img-top kaart2" alt="..." />
-            <div class="card-body">
-              <!-- !foutmelding als ik de 1 naar 2 verander? -->
-              <h5 class="card-title"><?php echo $item_name[1]["item_name"]?></h5>
-              <p class="card-text">
-              <?php echo "Ash Pearle";$item_desc?> 
-                
-              </p>
-              <H3 class=prijs>
-              <?php echo $euro?>
-                <?= number_format($prijs_yeezy[2]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs> <?= number_format($prijs_yeezyExcl[2]["priceExcl"], 2, ',', '') ?> excl BTW </h6>
-                </H3>
-              <button type="button" class="btn btn-dark">Add to cart</button>
-              
-              <?php
-                if($prijs_yeezy[2]["price"] >634){
-                  echo 'niet op voorraad';
-                }else if($prijs_yeezy[2]["price"] < 440){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-            </div>
-          </div>
-        </div>
-        <?php $korting[3]["korting"] =true;
-  ?>
-        <?php $img_yeezy[3]["image"] = 'img\yeezy3.jpg' ;
-?>
-        <div class="col">
-        <?php
-          $prijs_yeezy[3]["price"] = 439.00;
-          $prijs_yeezyExcl[3]["priceExcl"] = $prijs_yeezy[3]["price"] * 0.79;
-        ?>
-          <div class="card">
-          <img src="<?=$img_yeezy[3]["image"]?>" class="card-img-top kaart2" alt="..." />
-          <?php $item_name1[3]["item_name"] = "Yeezy 350 V2"
-          ?>
-            <div class="card-body">
-              <!-- ZELFDE PROBLEEM MOET OP 1 EN BIJ 117(item desc oreo) GEEN  -->
-              <h5 class="card-title"><?php echo $item_name[1]["item_name"]?></h5>
-              <p class="card-text">
-                <div class="spacing_title">
-              <?php echo "Oreo";$item_desc1?>
-            </div> 
-              <div class="korting">
-              <?php
-            if($korting[3]["korting"] == true){
-              echo '€499,99';
-            }?>
-          </div>
-                
-                
-                <H3 class=prijs>
-                <?php echo $euro?>
-                <?= number_format($prijs_yeezy[3]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs><?= number_format($prijs_yeezyExcl[3]["priceExcl"], 2, ',', '') ?> excl BTW</h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-                <?php
-                if($prijs_yeezy[3]["price"] >634){
-                  echo 'niet op voorraad';
-                }else if($prijs_yeezy[3]["price"] < 440){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="tm"></div>
-      <!-- kan hier onder geen array doen? -->
-      <div class="tommy-t"><h1><?php echo $title_tommy?></h1></div>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-      <?php $img_tommy[4]["image"] = 'img\tom1.jpg' ;
-?>
-<?php $korting[4]["korting"] =true;
-  ?>
-        <div class="col">
-        <?php
-          $prijs_tommy[4]["price"] = 99.99;
-          $prijs_tommyExcl[4]["priceExcl"] = $prijs_tommy[4]["price"] * 0.79;
-        ?>
-          <div class="card">
-          
-          <img src="<?=$img_tommy[4]["image"]?>" class="card-img-top kaart3" alt="..." />
-            <div class="card-body">
-            <?php $item_name1[4]["item_name"] = "Tommy Hilfiger crewneck"?>
-            <?php $item_desc1[4]["item_desc"] = "White Tommy Hilfiger Crewneck"?>
-              <h5 class="card-title"><?php echo $item_name1[4]["item_name"]?></h5>
-              
-          
-              <p class="card-text">
-              <div class="spacing_title">
-              <?php echo $item_desc1[4]["item_desc"]?>
-              </div>
-              <div class="korting">
-              <?php
-            if($korting[4]["korting"] == true){
-              echo '€120,00';
-            }?>
-          </div>
-                
-                
-                <H3 class=prijs>
-                <?php echo $euro?>
-                <?= number_format($prijs_tommy[4]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs> <?= number_format($prijs_tommyExcl[4]["priceExcl"], 2, ',', '') ?> excl BTW</h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-
-                <?php
-                if($prijs_tommy[4]["price"] >130){
-                  echo 'niet op voorraad';
-                }else if($prijs_tommy[4]["price"] > 100){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <?php $img_tommy[5]["image"] = 'img\tom2.jpg' ;
-?>
-        <div class="col">
-        <?php $korting[5]["korting"] =true;
-  ?>
-        <?php
-          $prijs_tommy[5]["price"] = 99.99;
-          $prijs_tommyExcl[5]["priceExcl"] = $prijs_tommy[5]["price"] * 0.79;
-        ?>
-          <div class="card">
-          <img src="<?=$img_tommy[5]["image"]?>" class="card-img-top kaart3" alt="..." />
-            <div class="card-body">
-            <?php $item_name1[5]["item_name"] = "Tommy Hilfiger crewneck"?>
-            <?php $item_desc1[5]["item_desc"] = "Green Tommy Hilfiger Crewneck"?>
-              <h5 class="card-title"><?php echo $item_name1[5]["item_name"]?></h5>
-              <p class="card-text">
-                <div class="space_lining">
-              <?php echo $item_desc1[5]["item_desc"]?>
-              </div>
-              <div class="korting">
-              <?php
-            if($korting[5]["korting"] == true){
-              echo '€120,00';
-            }?>
-          </div>
-                
-                
-                <H3 class=prijs>
-                <?php echo $euro?>
-                <?= number_format($prijs_tommy[5]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs> <?= number_format($prijs_tommyExcl[5]["priceExcl"], 2, ',', '') ?> excl BTW</h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-                <?php
-                if($prijs_tommy[5]["price"] >130){
-                  echo 'niet op voorraad';
-                }else if($prijs_tommy[5]["price"]  >100){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-              </p>
-            </div>
-          </div>
-        </div>
-        <?php $img_tommy[6]["image"] = 'img\tom3.jpg' ;
-?>
-        <div class="col">
-        <?php
-          $prijs_tommy[6]["price"] = 134.99;
-          $prijs_tommyExcl[6]["priceExcl"] = $prijs_tommy[6]["price"] * 0.79;
-
-        ?>
-          <div class="card">
-          <img src="<?=$img_tommy[6]["image"]?>" class="card-img-top kaart4" alt="..." />
-            <div class="card-body">
-            <?php $item_name1[6]["item_name"] = "Tommy Hilfiger Hoodie"?>
-            <?php $item_desc1[6]["item_desc"] = "Beige Tommy Hilfiger Hoodie"?>
-              <h5 class="card-title"><?php echo $item_name1[6]["item_name"]?></h5>
-              <p class="card-text">
-              <?php echo $item_desc1[6]["item_desc"]?>
-                
-                
-                <H3 class=prijs>
-                <?php echo $euro?>
-                <?= number_format($prijs_tommy[6]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs> <?= number_format($prijs_tommyExcl[6]["priceExcl"], 2, ',', '') ?> excl btw</h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-                <?php
-                if($prijs_tommy[6]["price"] >130){
-                  echo 'niet op voorraad';
-                }else if($prijs_tommy[6]["price"] >100){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-              </p>
-            </div>
-          </div>
-        </div>
-        <?php $img_tommy[7]["image"] = 'img\tom4.jpg' ;
-?>
-        <div class="col">
-        <?php $korting[7]["korting"] =true;
-  ?>
-        <?php
-          $prijs_tommy[7]["price"] = 109.99;
-          $prijs_tommyExcl[7]["priceExcl"] = $prijs_tommy[7]["price"] * 0.79;
-
-        ?>
-          <div class="card">
-          <img src="<?=$img_tommy[7]["image"]?>" class="card-img-top kaart5" alt="..." />
-            <div class="card-body">
-            <?php $item_name1[7]["item_name"] = "Tommy Hilfiger Hoodie"?>
-            <?php $item_desc1[7]["item_desc"] = "Dark Blue Tommy Hilfiger Hoodie"?>
-              <h5 class="card-title"><?php echo $item_name1[7]["item_name"]?></h5>
-              <p class="card-text">
-                <div class = space_lining>
-              <?php echo $item_desc1[7]["item_desc"]?>
-              </div>
-              <div class="korting">
-              <?php
-            if($korting[7]["korting"] == true){
-              echo '€120,00';
-            }?>
-          </div>
-                
-                
-                <H3 class=prijs>
-                <?php echo $euro?>
-                <?= number_format($prijs_tommy[7]["price"], 2, ',', '') ?> incl BTW
-                <h6 class=prijs> <?= number_format($prijs_tommyExcl[7]["priceExcl"], 2, ',', '') ?> excl BTW</h6>
-                </H3>
-                <button type="button" class="btn btn-dark">Add to cart</button>
-                <?php
-                if($prijs_tommy[7]["price"] >634){
-                  echo 'niet op voorraad';
-                }else if($prijs_tommy[7]["price"] < 440){
-                  echo '<span class= "<button type="button" class="btn btn-outline-dark">Weinig op voorraad</button>
-                  </button> </span>';
-                } else{
-                  echo 'Ruim op voorraad';
-                }
-                ?>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
+      
     <!-- <div class="row1">
       <div class="column1">
         <img src="./img/tnf1.jpg" alt="" style="width: 50%" />
